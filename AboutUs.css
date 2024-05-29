@@ -6,6 +6,11 @@
   font-family: "Roboto", sans-serif;
 }
 
+/*Background color for the body*/
+body{
+background-color: #ffffff;
+}
+
 /*Styling the header*/
 .header{
   /*Setting a fixed position while scrolling*/
@@ -246,9 +251,10 @@
     justify-content: space-around;
 }
 
-.Cards{
+.cards-container{
   position: relative;
   left: -5px;
+  top: -590px;
 }
 
 /* Styling the content */
@@ -644,22 +650,42 @@ footer ul li a {
 
 .footer ul li a:hover {
     color: #2b6da7;
+/*Styling the hr*/
+hr{
+  width: 90%;
+  border: 0px;
+  border-bottom: 1px solid #ccc;
+
+}
+
+footer hr{
+  margin-bottom: 0px;
+  position: relative;
+  width: 90%;
+  left: 50px;
+  bottom: -50px;
+}
+
+.copyright{
+  text-align: center;
+  position: relative;
+  bottom: -50px;
 }
 
 /*Styling the line under heading*/
 .underline{
-  width: 120%;
+  width: 100%;
   height: 5px;
-  background: #63845a;
+  background: #719477;
   border-radius: 3px;
   position: absolute;
   top: 25px;
   left: 0px;
-
+  overflow: hidden;
 }
 
 .underline span{
-  width: 10px;
+  width: 15px;
   height: 100%;
   background: #fff;
   border-radius: 3px;
@@ -726,6 +752,10 @@ footer p {
     margin-top: 20px;
 }
 
+  left: 10px;
+  animation: moving 2s linear infinite;
+}
+
 /*keyframes animation*/
 @keyframes moving{
   0%{
@@ -741,11 +771,11 @@ footer p {
   footer{
       bottom: unset;
   }
-  .col{
+  .column{
       flex-basis: 100%;
   }
 
-  .col:nth-child(2) .col:nth-child(3){
+  .column:nth-child(2) .column:nth-child(3){
       flex-basis: 100%;
   }
 }
@@ -762,4 +792,5 @@ footer p {
   opacity: 1;
   
   }
+
 
