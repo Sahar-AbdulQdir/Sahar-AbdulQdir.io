@@ -1,0 +1,408 @@
+/*Resetting the defult values for margin, padding, and box sizing*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/*Background color for the body*/
+body{
+  background-color: #ffffff;
+}
+
+/*Styling the header*/
+  .header{
+    /*Setting a fixed position while scrolling*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f1ececab;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*Blur effect to the background*/
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid #a09d9de0;
+    z-index: 1000;
+  }
+
+  /* Pseudo-element for the header background animation */
+  .header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+    transition: 0.5s;
+  }
+
+/* Animation when hover */  
+  .header:hover::before{
+    left: 100%;
+  }
+  
+  /* Styling the logo */
+  .logo img{
+    width: 270px;
+    max-height: 90px;
+  }
+  
+  /* Styling the navbar links */
+  .navbar a{
+    color:#0F7D48;
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: 0.3s;
+  }
+  
+  /* Styling the navbar links when hover */
+  .navbar a:hover{
+    color: #a7ccaf;
+  }
+
+  /* Styling the container content*/
+.container{
+  color: #000;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #ffffffe3;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+/* Styling the service */
+.service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling the main heading */
+h1{
+    text-align: center;
+    font-size: 90px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: transparent;
+    letter-spacing: 4px;
+    background-color: rgb(12, 51, 21);
+    background: linear-gradient(8deg, #0d2e08 0%, #0d6145 41%, #0f813d 100%);
+    background-clip: border-box ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+/* Pseudo-element for the line under the h1 */
+h1:after{
+    content:'';
+    position: absolute;
+    top: 120%;
+    left: 10%;
+    height: 8px;
+    width: 80%;
+    border-radius: 8px;
+    background-color: rgb(92, 133, 103);
+}
+
+/*keyframes animation*/
+@keyframes animate {
+    95%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        left: 88%;
+    }
+    
+}
+
+/* Styling the cards to be displayed in grid */
+.cards{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    margin-top: 80px;
+    margin-left: 30px;
+}
+
+/* Styling every card on it's on*/
+.card{
+    height: 210px;
+    width: 680px;
+    background-color: #e3f1e7;
+    padding: 3% 8%;
+    border: 0.5px solid rgba(8, 41, 25, 0.767);
+    border-radius: 8px;
+    transition: 6s;
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Hover effect */
+.card:hover:after{
+    width: 255%;
+    top: -100%;
+    background: #89DB96;
+}
+
+/* Styling the card's icons  */
+.card i{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+/* Styling the card's heading  */
+.card h2{
+
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Styling the card's paragraph  */
+.card p{
+    text-align: center;
+    width: 100%;
+    margin: 12px 0;
+
+    font-size: 18px;
+}
+
+/* Hover effect */
+.card:hover{
+    transform: translateY(-8px);
+    background-color: #69a477;
+    color: white;
+}
+
+/* Hover effect */
+.card:hover i{
+    color: #084c17;
+}
+
+/*media queries to make elements responsive*/
+@media screen and (max-width:1200px) {
+    .cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width:900px) {
+    .cards{
+        grid-template-columns: repeat(1,1fr);
+    }
+    h1{
+        font-size: 50px;
+    }
+}
+
+/*Styling the footer*/
+
+footer{
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to right, #92C2CB, #89DB96);
+    color: #fff;
+    padding: 50px 0px;
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 0px;
+  }
+  
+  footer .row{
+    margin-bottom: 0px;
+  }
+  
+  .row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  footer .column{
+    padding-bottom: 0px;
+  }
+  
+  .column{
+    flex-basis: 25%;
+  }
+  
+  .column:nth-child(2), :nth-child(3){
+    flex-basis: 15%;
+  }
+  
+  /*Styling the footer's logo*/
+  .footer-logo{
+    width: 230px;
+    height: 90px;
+    margin-bottom: 30px;
+  }
+  
+  /*Styling the footer's heading in the columns*/
+  .column h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  /*Styling the email input form*/
+  .email-id{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 10px 0;
+  }
+  
+/*Styling the links*/
+  .column ul li a{
+    color: white;
+    text-decoration: none;
+  }
+
+  /*Styling the form position and setting a border*/
+  form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+  }
+  
+  /*Styling the icon*/
+  form .fa-envelope{
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  /*Styling the input fields*/
+  form input{
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+  }
+  
+  /*Styling the button*/
+  form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  /*Styling the icon inside the button*/ 
+  form button .fa-arrow-right{
+    font-size: 16px;
+    color: #ccc;
+  }
+  
+  /*Styling the icons*/
+  .social-icons .fa-brands{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  
+  /*Styling the hr*/
+  hr{
+    width: 90%;
+    border: 0px;
+    border-bottom: 1px solid #ccc;
+  
+  }
+  
+  footer hr{
+    margin-bottom: 0px;
+    position: relative;
+    width: 90%;
+    left: 50px;
+    bottom: -50px;
+  }
+  
+  .copyright{
+    text-align: center;
+    position: relative;
+    bottom: -50px;
+  }
+  
+  /*Styling the line under heading*/
+  .underline{
+    width: 100%;
+    height: 5px;
+    background: #719477;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    overflow: hidden;
+  }
+  
+  .underline span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    animation: moving 2s linear infinite;
+  }
+  
+  /*keyframes animation*/
+  @keyframes moving{
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }
+  }
+  
+  /*media queries to make elements responsive*/
+  @media (max-width: 700px){
+    footer{
+        bottom: unset;
+    }
+    .column{
+        flex-basis: 100%;
+    }
+  
+    .column:nth-child(2) .column:nth-child(3){
+        flex-basis: 100%;
+    }
+  }
+
+
+  /*animation on scroll*/
+  .hidden {
+    opacity: 0;
+    transition: all 1s;
+    
+    }
+    
+    .show {
+    opacity: 1;
+    
+    }

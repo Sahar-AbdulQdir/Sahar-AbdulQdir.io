@@ -1,0 +1,474 @@
+/*Resetting the defult values for margin, padding, and box sizing*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/*Background color for the body*/
+body{
+background-color: #ffffff;
+}
+
+/*Styling the header*/
+.header{
+  /*Setting a fixed position while scrolling*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f1ececab;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*Blur effect to the background*/
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid #a09d9de0;
+  z-index: 1000;
+}
+
+/* Pseudo-element for the header background animation */
+.header::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+  transition: 0.5s;
+}
+
+/* Animation when hover */  
+.header:hover::before{
+  left: 100%;
+}
+
+/* Styling the logo */
+.logo img{
+  width: 270px;
+  height: 90px;
+}
+
+/* Styling the navbar links */
+.navbar a{
+  color:#0F7D48;
+  font-size: 20px;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: 0.3s;
+}
+
+/* Styling the navbar links when hover */
+.navbar a:hover{
+  color: #a7ccaf;
+}
+.contact-us{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.main-1 , .main-2{
+  h1{
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;}
+  text-align: center;
+  font-size: 20px;
+}
+
+.main-2{
+  h1{
+    margin-left: -260px;
+    position: relative;
+    top: -20px;
+  }
+}
+.main-1{
+    margin-top: 160px;
+    margin-left: 130px;
+}
+.main-2{
+    margin-top: 160px;
+    margin-left: 80px;
+}
+
+.Name , .email , .Message{
+    margin-bottom: 20px;
+}
+.Name , .email {
+    width: 400px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #9ce2c6, #a1eaae);
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+  }
+  
+  .input1 {
+    width: 390px;
+    height: 60px;
+    border: none;
+    outline: none;
+    caret-color: rgb(255, 81, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding-left: 15px;
+    letter-spacing: 0.8px;
+    color: rgb(19, 19, 19);
+    font-size: 13.4px;
+  }
+
+  .Message{
+    width: 400px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #9ce2c6, #a1eaae);
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+  }
+  .input2 {
+    width: 390px;
+    height: 250px;
+    border: none;
+    outline: none;
+    caret-color: rgb(255, 81, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding-left: 15px;
+    letter-spacing: 0.8px;
+    color: rgb(19, 19, 19);
+    font-size: 13.4px;
+  }
+
+  .input2::placeholder{
+    position: relative;
+    top: -100px;
+  }
+
+  button {
+    position: relative;
+    left: -125px;
+    width: 190px;
+    height: 55px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(to right, #9ce2c6, #a1eaae);
+    transition: all 1.5s ease;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    padding: 0;
+   }
+   
+   button span {
+    display: inline-block;
+    padding: 15px 35px;
+    font-size: 17px;
+    border-radius: 20px;
+    background: #ffffff10;
+    backdrop-filter: blur(20px);
+    transition: 0.4s ease-in-out;
+    transition-property: color;
+    height: 100%;
+    width: 100%;
+    a{
+        color: white;
+        text-decoration: none;
+    }
+   }
+   
+   button span:hover {
+    backdrop-filter: blur(0px);
+    color: #ffffff;
+   }
+   
+  
+
+/*Styling the footer*/
+
+footer{
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to right, #92C2CB, #89DB96);
+    color: #fff;
+    padding: 50px 0px;
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 80px;
+  }
+  
+  
+  footer .row{
+    margin-bottom: 0px;
+  }
+  
+  .row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  footer .col{
+    padding-bottom: 0px;
+  }
+  
+  .col{
+    flex-basis: 25%;
+  }
+  
+  .col:nth-child(2), :nth-child(3){
+    flex-basis: 15%;
+  }
+  
+  /*Styling the footer's heading in the columns*/
+  .col h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  /*Styling the email input form*/
+  .email-id{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 10px 0;
+  }
+  
+  ul li{
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  /*Styling the form position and setting a border*/
+  form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+  }
+  
+  /*Styling the icon*/
+  form .fa-envelope{
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  /*Styling the input fields*/
+  form input{
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+  }
+  
+  /*Styling the button*/
+  form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  /*Styling the icon inside the button*/ 
+  form button .fa-arrow-right{
+    font-size: 16px;
+    color: #ccc;
+  }
+  
+  /*Styling the icons*/
+  .social-icons .fa-brands{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  
+  .copyright{
+    text-align: center;
+    position: relative;
+    top: 45px;
+  }
+  
+  /*Styling the footer's logo*/
+  .footer-logo {
+    width: 230px;
+    height: 90px;
+      margin-bottom: 20px;
+      margin-left: 20px;
+  }
+  
+  .footer-logo, .Whats-App-logo img {
+      max-height: 100px;
+  }
+  
+  .footer .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+  }
+  
+  .footer .col {
+      flex: 1 1 250px;
+      margin: 20px;
+  }
+  
+  .footer h3 {
+      margin-bottom: 20px;
+  }
+  
+  .footer ul {
+      list-style: none;
+      padding: 0;
+  }
+  
+  .footer ul li {
+      margin-bottom: 10px;
+  }
+  
+  /*Styling the links*/
+  footer ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+  }
+  
+  .footer ul li a:hover {
+      color: #2b6da7;
+  }
+  
+  /*Styling the line under heading*/
+  .underline{
+    width: 120%;
+    height: 5px;
+    background: #719477;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0px;
+  
+  }
+  
+  .underline span{
+    width: 10px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    animation: moving 2s linear infinite;
+  }
+  
+  .footer form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .footer form input {
+      padding: 10px;
+      border: none;
+      border-radius: 20px;
+      margin-right: 10px;
+  }
+  
+  .footer form button {
+      padding: 10px;
+      border: none;
+      border-radius: 50%;
+      background: #4c6b49;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s;
+  }
+  
+  .footer form button:hover {
+      background: #3b5541;
+  }
+  
+  .footer .social-icons {
+      margin-top: 20px;
+  }
+  
+  .footer .social-icons i {
+      font-size: 24px;
+      margin: 0 10px;
+      cursor: pointer;
+      transition: color 0.3s;
+  }
+  
+  .footer .social-icons i:hover {
+      color: #4c6b49;
+  }
+  /*Styling the hr inside the footer*/
+  .footer-hr{
+      width: 80%;
+      border: 0;
+      height: 1px;
+      position: relative;
+      top: 60px;
+      left: 90px;
+      background: #f3f3f3;
+  }
+  
+  footer p {
+      margin-top: 20px;
+  }
+  
+  /*keyframes animation*/
+  @keyframes moving{
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }
+  }
+  
+  /*media queries to make elements responsive*/
+  @media (max-width: 700px){
+    footer{
+        bottom: unset;
+    }
+    .col{
+        flex-basis: 100%;
+    }
+  
+    .col:nth-child(2) .col:nth-child(3){
+        flex-basis: 100%;
+    }
+  }
+  
+ /*animation on scroll*/
+  .hidden {
+    opacity: 0;
+    transition: all 1s;
+    
+    }
+    
+    .show {
+    opacity: 1;
+    
+    }

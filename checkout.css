@@ -1,0 +1,259 @@
+/*Resetting the defult values for margin, padding, and box sizing*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/*Background color for the body*/
+body{
+background-color: #ffffff;
+}
+
+/*Styling the header*/
+.header{
+  /*Setting a fixed position while scrolling*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f1ececab;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*Blur effect to the background*/
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid #a09d9de0;
+  z-index: 1000;
+}
+
+/* Pseudo-element for the header background animation */
+.header::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+  transition: 0.5s;
+}
+
+/* Animation when hover */  
+.header:hover::before{
+  left: 100%;
+}
+
+/* Styling the logo */
+.logo img{
+  width: 270px;
+  height: 90px;
+}
+
+/* Styling the navbar links */
+.navbar a{
+  color:#0F7D48;
+  font-size: 20px;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: 0.3s;
+}
+
+/* Styling the navbar links when hover */
+.navbar a:hover{
+  color: #a7ccaf;
+}
+
+/*Styling the container*/
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:25px;
+  min-height: 100vh;
+  background-color: #f2fff0;
+  /*Styling the image in the container*/
+img{
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    width: 440px;
+    height: 475px;
+    position: relative;
+    left: -20px;
+}
+}
+
+.container form{
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding:20px;
+  width:560px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+.container form .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+}
+
+.container form .row .column{
+  flex:1 1 250px;
+}
+
+.container form .row .column .title{
+  font-size: 20px;
+  color:#333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.container form .row .column .inputBox{
+  margin:15px 0;
+}
+
+.container form .row .column .inputBox span{
+  margin-bottom: 10px;
+  display: block;
+}
+
+.container form .row .column .inputBox input{
+  width: 100%;
+  border:1px solid #ccc;
+  border-radius: 25px;
+  padding:10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.container form .row .column .inputBox input:focus{
+  border:1px solid #000;
+}
+
+.container form .row .column .Box{
+  display: flex;
+  gap:15px;
+}
+
+.container form .row .column .Box .inputBox{
+  margin-top: 5px;
+}
+
+.container form .row .column .inputBox img{
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+/*Styling the button in the form*/
+.container form .submit-btn {
+        height: 55px;
+        width: 275px;
+        margin: auto;
+        align-items: center;
+        border-radius: 50px;
+        border: none;
+        text-align: center;
+        color: transparent;
+        text-shadow: 0 0 0 rgb(255, 255, 255);
+        font-size: 17px;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-decoration: none;
+        box-sizing: border-box;
+        cursor: pointer;
+        transition: transform 50ms ease;
+        background: linear-gradient(90deg, #6fd19b, #15a142, #3ee747, #09c425);
+        background-size: 400%;
+        animation: welcome 0.5s ease 0s 1 normal forwards;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      
+      /* Hover effect */
+      .submit-btn:hover {
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(67, 230, 127, 0.9);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(139, 224, 78, 0.9);
+        box-shadow: 0px 0px 15px 0px rgba(143, 212, 109, 0.9);
+        animation: animate 8s ease infinite;
+        transition: box-shadow, 0.4s;
+        border: none;
+        font-size: 19px;
+        transform: scale(1.05, 1.05);
+        background: linear-gradient(90deg, #83fd53, #4acc98, #56df41, #53fd64);
+        background-size: 400%;
+      }
+      
+      /*keyframes animation*/
+      @keyframes animate {
+        0% {
+          background-position: 0%;
+        }
+      
+        100% {
+          background-position: 400%;
+        }
+      }
+      
+      @keyframes spin {
+        0% {
+          --rotate: 0deg;
+        }
+      
+        100% {
+          --rotate: 360deg;
+        }
+      }
+      
+      /* Hover effect */
+      .submit-btn:hover:before {
+        filter: blur(20px);
+        opacity: 1;
+        animation: animate 8s linear infinite;
+      }
+
+.container form .submit-btn:hover{
+  background: #2ecc71;
+}
+
+.submit-btn{
+
+    align-items: center;
+    h5{
+        position: relative;
+        left: -17x;
+        top: 2px;
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+    }
+}
+
+/*Styling the footer*/
+footer{
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to right, #92C2CB, #89DB96);
+    color: #fff;
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: -25px;
+  }
+  
+  /*Styling the footer's hr*/
+  hr{
+    width: 90%;
+    border: 0px;
+    border-bottom: 1px solid #ccc;
+    margin: 3px auto;
+  }
+footer hr{
+    margin-bottom: 0px;
+  }
+  
+  /*Styling the copyright*/
+  .copyright{
+    text-align: center;
+  }
