@@ -1,0 +1,676 @@
+/*Resetting the defult values for margin, padding, and box sizing*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/*Background color for the body*/
+body{
+background-color: #ffffff;
+
+
+}
+
+/*Styling the header*/
+.header{
+  /*Setting a fixed position while scrolling*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f1ececab;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*Blur effect to the background*/
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid #a09d9de0;
+  z-index: 1000;
+}
+
+/* Pseudo-element for the header background animation */
+.header::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+  transition: 0.5s;
+}
+
+/* Animation when hover */  
+.header:hover::before{
+  left: 100%;
+}
+
+/* Styling the logo */
+.logo img{
+  width: 270px;
+  height: 90px;
+}
+
+/* Styling the navbar links */
+.navbar a{
+  color:#0F7D48;
+  font-size: 20px;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: 0.3s;
+}
+
+/* Styling the navbar links when hover */
+.navbar a:hover{
+  color: #a7ccaf;
+}
+
+/*About Us section*/
+.about{
+  margin-top: -90px;
+}
+.about .main img{
+    width: 550px;
+    height: 400px;
+    max-width: 90%;
+    height: auto;
+    padding: 0 10px;
+}
+
+.text{
+    width: 600px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+
+.main{
+    width: 1240px;
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    img{
+      position: relative;
+      top: 220px;
+      left: -50px;
+    }
+    .text{
+      position: relative;
+      top: 220px;
+    }
+}
+
+/*Styling the heading in the text class*/
+.text h4{
+    font-size: 18px;
+    color: #353535;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+/*Styling the heading in the text class*/
+.text h1{
+    font-size: 60px;
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/*Styling the paragraph in the text class*/
+.text p{
+    font-size: 16px;
+    color: #354a38;
+    line-height: 30px;
+    margin-bottom: 35px;
+}
+
+/*Styling the button*/
+.btn1 {
+    display: inline-block;
+    margin-top: 20px;
+}
+ .btn1 button  {
+    border: none;
+    display: inline-block;
+    position: relative;
+    padding: 20px 32px;
+    background: transparent;
+    overflow: hidden;   
+    z-index: 1;    
+    margin-right: 20px;
+  }
+
+  /*Styling the link in the button*/
+  .btn1 a{
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+    color: #90D677;
+    font-family: inherit;
+    font-weight: 500;
+  }
+  
+  button span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    border: 4px solid #90D677;
+  }
+  
+  button span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+  }
+  
+  button:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: #90D677;
+  }
+  
+  /* Hover effect */
+  button:hover {
+    color: white;
+  }
+  
+  button:active span::before {
+    background: #90D677;
+  }
+
+  /*media queries to make elements responsive*/
+  @media screen and(max-width: 1250px){
+    .about{
+        width: 100%;
+        height: auto;
+        padding: 60px 0;
+    }
+
+    .text{
+        text-align: center;
+        margin-top: 40px;
+    }
+    
+  }
+
+  @media screen and(max-width: 650px){
+    .about .main img{
+        margin-bottom: 35px;
+    }
+
+    .text h1{
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+}
+
+
+/*Cards section*/
+
+.Cards-section{
+    margin-left: 70px;
+    margin-top: 320px;
+    margin-bottom: 0px;
+    img{
+      width: 550px;
+    height: 500px;
+    max-width: 90%;
+    height: auto;
+    padding: 0 10px;
+    margin-left: 780px;
+    }
+}
+
+/* Styling every card on it's own */
+.card {
+    position: relative;
+    top: 15px;
+    align-items: center;
+    justify-content: center;
+    min-width: 320px;
+    padding: 2px;
+    overflow: hidden;
+    line-height: 1.6;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+    display: inline-block;
+    margin: 5px; 
+    justify-content: space-around;
+}
+
+.cards-container{
+  position: relative;
+  left: -5px;
+  top: -590px;
+}
+
+/* Styling the content */
+  .content {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 34px;
+    color: #000000;
+    overflow: hidden;
+    background: #ffffff;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+    margin-right: 30px;
+  }
+  
+  /* Styling the heading in the content */
+  .content .heading {
+    font-weight: 700;
+    font-size: 37px;
+    line-height: 1.3;
+    z-index: 1;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  /* Styling the paragraph in the content */
+  .content .para {
+    text-indent: 1px;
+    z-index: 1;
+    opacity: 1;
+    font-size: 14px;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  /* Hover effect */
+  .content:hover{
+    color: white;
+    background-color: #90D677;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    height: 160%;
+    min-width: 320px;
+    background: #90d67700;
+    transform-origin: center;
+    animation: moving 4.8s linear infinite paused;
+    transition: all 0.88s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .card:hover::before {
+    animation-play-state: running;
+    z-index: -1;
+    width: 20%;
+  }
+  
+  /* Hover effect */
+  .card:hover {
+    border: #90D677 solid 1px;
+    box-shadow: 0rem 6px 13px rgba(10, 60, 255, 0.1),
+      0rem 24px 24px rgba(10, 60, 255, 0.09),
+      0rem 55px 33px rgba(10, 60, 255, 0.05),
+      0rem 97px 39px rgba(10, 60, 255, 0.01), 0rem 152px 43px rgba(10, 60, 255, 0);
+    scale: 1.05;
+  }
+  
+  /*keyframes animation*/
+  @keyframes moving {
+    0% {
+      transform: rotate(0);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Styling the team container */
+  .team-container {
+    height: 80vh;
+    width: 80vw;
+    max-height: 700px;
+    max-width: 1180px;
+    min-height: 200px;
+    min-width: 900px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: -660px;
+    left: 250px;
+    h1{
+      color: #000;
+      font-size: 50px;
+      margin-left: -250px;
+    }
+
+  .border {
+    height: 340px;
+    width: 260px;
+    background: transparent;
+    border-radius: 25px;
+    transition: border 1s;
+    position: relative;
+  }
+  
+  /* Hover effect */
+  .border:hover {
+    border: 3px solid white;
+  }
+  
+  .Card {
+    height: 400px;
+    width: 300px;
+    background: grey;
+    border-radius: 25px;
+    transition: background 0.8s;
+    overflow: hidden;
+    background: black;
+    box-shadow: 0 70px 63px -60px #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .card1 {
+    background: url('About-Images/team1.jpeg') center center no-repeat;
+    background-size: 300px;
+  }
+  
+  /* Hover effect */
+  .card1:hover {
+    background: url('About-Images/team1.jpeg') left center no-repeat;
+    background-size: 600px;
+  }
+  
+
+  
+  .card2 {
+    background: url('About-Images/team2.png') center center no-repeat;
+    background-size: 300px;
+  }
+  
+  /* Hover effect */
+  .card2:hover {
+    background: url('About-Images/team2.png') left center no-repeat;
+    background-size: 500px;
+  }
+  
+
+  
+  .card3 {
+    background: url('About-Images/team3.png') center center no-repeat;
+    background-size: 300px;
+  }
+  
+  /* Hover effect */
+  .card3:hover {
+    background: url('About-Images/team3.png') left center no-repeat;
+    background-size: 600px;
+  }
+  
+
+  h2 {
+    color: rgb(0, 0, 0);
+    margin: 20px;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+ 
+  p{
+    margin: 20px;
+    color: #000000;
+    opacity: 0;
+    transition: opacity 1s;    
+  }
+
+  /* Hover effect */
+  .card1:hover h2,
+  .card1:hover p,
+  .card2:hover h2,
+  .card2:hover p,
+  .card3:hover h2,
+  .card3:hover p  {
+    opacity: 1;
+  }
+}
+
+
+.fp-iframe{
+  position: relative;
+  top: -700px;
+}
+
+/*Styling the footer*/
+
+footer{
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(to right, #92C2CB, #89DB96);
+  color: #fff;
+  
+  font-size: 13px;
+  line-height: 20px;
+  margin-bottom: 0px;
+  margin-top: -650px;
+  
+}
+
+footer .row{
+  margin-bottom: 0px;
+ 
+}
+
+.row{
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+ 
+}
+
+footer .column{
+  padding-bottom: 0px;
+}
+
+.column{
+  flex-basis: 25%;
+}
+
+.column:nth-child(2), :nth-child(3){
+  flex-basis: 15%;
+}
+
+/*Styling the footer's logo*/
+.footer-logo{
+  width: 230px;
+  height: 90px;
+  margin-bottom: 30px;
+}
+
+/*Styling the footer's heading in the columns*/
+.column h3{
+  width: fit-content;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/*Styling the email input form*/
+.email-id{
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+/*Styling the links*/
+.column ul li a{
+  color: white;
+  text-decoration: none;
+}
+
+/*Styling the form position and setting a border*/
+form{
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 50px;
+}
+
+/*Styling the icon*/
+form .fa-envelope{
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+/*Styling the input fields*/
+form input{
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+}
+
+/*Styling the button*/
+form button{
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+/*Styling the icon inside the button*/ 
+form button .fa-arrow-right{
+  font-size: 16px;
+  color: #ccc;
+}
+
+/*Styling the icons*/
+.social-icons .fa-brands{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #000;
+  background: #fff;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+/*Styling the hr*/
+hr{
+  width: 90%;
+  border: 0px;
+  border-bottom: 1px solid #ccc;
+
+}
+
+footer hr{
+  margin-bottom: 0px;
+  position: relative;
+  width: 90%;
+  left: 50px;
+  bottom: -50px;
+}
+
+.copyright{
+  text-align: center;
+  position: relative;
+  bottom: -50px;
+}
+
+/*Styling the line under heading*/
+.underline{
+  width: 100%;
+  height: 5px;
+  background: #719477;
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.underline span{
+  width: 15px;
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  animation: moving 2s linear infinite;
+}
+
+/*keyframes animation*/
+@keyframes moving{
+  0%{
+      left: -20px;
+  }
+  100%{
+      left: 100%;
+  }
+}
+
+/*media queries to make elements responsive*/
+@media (max-width: 700px){
+  footer{
+      bottom: unset;
+  }
+  .column{
+      flex-basis: 100%;
+  }
+
+  .column:nth-child(2) .column:nth-child(3){
+      flex-basis: 100%;
+  }
+}
+
+
+/*animation on scroll*/
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+  
+  }
+  
+  .show {
+  opacity: 1;
+  
+  }
+
+  /*
+  footer{
+
+    margin-bottom: 0; /* Adjust margin-bottom as needed 
+
+  
+  #flip-book{
+    /* Adjust positioning as needed 
+    margin-top: 20px; /* Example margin-top adjustment 
+  }
+  
+  .fp-iframe{
+    /* Adjust positioning as needed 
+    margin-top: 0; /* Example margin-top adjustment 
+  }
+  */
