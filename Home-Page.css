@@ -9,6 +9,7 @@
 /*Background color for the body*/
 body{
 background-color: #ffffff;
+overflow-x: hidden;
 }
 
   
