@@ -23,7 +23,7 @@ overflow-x: hidden;
   to { opacity: 1; }
 }
 
-/*      Loader styling and animation*/
+/*Loader styling and animation*/
 body.loaded .content {
   display: block;
   animation: showContent 1s ease-in;
@@ -150,6 +150,11 @@ body.loaded .content {
 .navbar a:hover{
   color: #a7ccaf;
 }
+
+/* This Code is borrowed from CodePen
+Author: [CODEPEN]
+Original Pen: [https://codepen.io/anon/embed/ExvqdNa?height=450&theme-id=1&slug-hash=ExvqdNa&default-tab=css,result#css-box]
+Description: [Fade in text animation] */
 
 /* Styling the quote */
 .quote{

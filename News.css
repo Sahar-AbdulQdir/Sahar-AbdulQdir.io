@@ -70,6 +70,12 @@ body{
   overflow-x: hidden;
 }
 
+
+/* This Code is borrowed from CodePen
+Author: [CODEPEN]
+Original Pen: [https://codepen.io/anon/embed/ExvqdNa?height=450&theme-id=1&slug-hash=ExvqdNa&default-tab=css,result#css-box]
+Description: [Fade in text animation] */
+
 /* Styling the quote*/
 .quote{
   margin-top: -10px;
