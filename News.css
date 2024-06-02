@@ -209,6 +209,11 @@ Description: [Fade in text animation] */
   margin-left: -90px;
 }
  
+/* This Code is borrowed from CodePen
+Author: [Jonathan Dempsey]
+Original Pen: [https://codepen.io/jonathanedempsey/pen/YzxjGWy]
+Description: [ This card are scrollable from the inside] */
+
 /*Styling each card*/
 .cards_item {
   display: flex;

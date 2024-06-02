@@ -360,6 +360,11 @@
   .border:hover {
     border: 3px solid white;
   }
+
+/* This Code is borrowed from CodePen
+Author: [P]
+Original Pen: [https://codepen.io/petegarvin1/pen/YzWBbRx]
+Description: [ This card has zoom in effect on the background of the card on hovering.] */
   
   .Card {
     height: 400px;
